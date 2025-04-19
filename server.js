@@ -1,3 +1,4 @@
+require('dotenv').config(); // Carrega as variáveis do .env
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
@@ -9,7 +10,7 @@ app.use(express.json());
 
 // Serve arquivos estáticos da pasta 'public'
 app.use(express.static(path.join(__dirname, 'public')));
-const port = process.env.PORT || 3000;
+
 
 const comentarioFile = 'backend/comentarios.json';
 
@@ -91,9 +92,11 @@ app.post('/create-pix-payment', async (req, res) => {
     res.status(500).json({ error: 'Erro ao criar pagamento' });
   }
 });
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
+  console.log(`Servidor rodando na porta ${port}`);
 });
+
 
 
