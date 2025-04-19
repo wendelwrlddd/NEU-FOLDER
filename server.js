@@ -1,4 +1,6 @@
-require('dotenv').config(); // Carrega as variáveis do .env
+const dotenv = require('dotenv');
+dotenv.config();
+// Carrega as variáveis do .env
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
