@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://i.postimg.cc/9fqYVvxh/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body>
+    <main class="">
+        <aside class="sidebar animate__animated animate__bounce " data-sidebar>
+            <div class="sidebar-info">
+                <figure class="avatar-box">
+                    <img style="border-radius: 20px;" src="ChatGPT Image 18 de abr. de 2025, 14_09_40.png" alt="avatar" width="80">
+                </figure>
+
+                <div class="info-content animate__animated animate__bounce">
+                    <h1 class="name" title="Richard Hanrick">Wendel Monteiro </h1>
+                    <div style="display: flex; gap: 10px;">
+                        <p class="title">Web Developer</p>
+                        <br>
+                        <p class="title">Full Stack</p>
+                    </div>
+                </div>
+
+                <a href="https://www.contate.me/sitesfood" target="_blank" rel="noopener noreferrer">
+                    <button class="info-more-btn" data-sidebar-btn>
+                        <span>Meu WhatsApp</span>
+                        <ion-icon name="chevron-down"></ion-icon>
+                    </button>
+                </a>
+                
+                </a>
+            </div>
+
+            <div class="sidebar-info-more">
+                <div class="separator"></div>
+
+                
+                    
+                    
+
+                <div class="separator"></div>
+
+                <ul class="social-list">
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>Sobre mim</button></li>
+                    
+                </ul>
+            </nav>
+
+            <article class="about active" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">Saiba mais!</h2>
+                </header>
+
+                <section class="about-text">
+                    <p>Com esse portifolio quero demonstrar alguns dos meus conhecimentos ok ? aqui vcs verão api de pagamentos e o mais importante um blog que eu atualizo diariamente sobre oque estou fazendo e oque estou estudando !</p>
+                    <p>No linkdim vcs verão meus projetos prontos ! aqui os recrutadores verão oque aconteceu no decorrer deles </p>
+                </section>
+
+                <section class="service">
+                    <h3 class="h3 service-title">Minhas habilidades</h3>
+                
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/4389jZkP/icon-design.png" alt="ícone" width="40">
+                            </div>
+                
+                            <div class="service-content-box ">
+                                <h4 class="h4 service-item-title">Web Design</h4>
+                                <p class="service-item-text">O design mais moderno e de alta qualidade feito em nível profissional.</p>
+                            </div>
+                        </li>
+                
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/ZqgqrqzG/icon-dev.png" alt="ícone" width="40">
+                            </div>
+                
+                            <div class="service-content-box ">
+                                <h4 class="h4 service-item-title ">Desenvolvimento Web</h4>
+                                <p class="service-item-text">Desenvolvimento de sites de alta qualidade em nível profissional.</p>
+                            </div>
+                        </li>
+                
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                <img src="https://i.postimg.cc/xjLdzYxZ/icon-app.png" alt="ícone" width="40">
+                            </div>
+                
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Back-end em nível Pleno</h4>
+                                <p class="service-item-text">
+                                    Desenvolvimento profissional de APIs RESTful com foco em performance, segurança e escalabilidade. 
+                                    Experiência na integração com bancos de dados,  serviços externos como gateways de pagamento. Domínio de ferramentas como 
+                                    Node.js, Express e Python para criar sistemas confiáveis e preparados para produção.
+                                </p>
+                            </div>
+                            
+                        </li>
+                
+                        <li class="service-item">
+                            <div class="service-icon-box">
+                                
+                            </div>
+                
+                            <div class="service-item">
+                                <div class="service-icon-box">
+                                  <img src="https://i.postimg.cc/4389jZkP/icon-design.png" alt="ícone" width="40">
+                                </div>
+                                <div class="service-content-box">
+                                  <h4 class="h4 service-item-title">Apoie o criador</h4>
+                                  <p class="service-item-text">
+                                    Me apoie e veja minha API de pagamento em funcionamento.
+                                    <button id="comprar">Apoiar com pix</button>
+                                  </p>
+                                  <div id="paymentForm" style="display: none; margin-top: 15px;">
+                                    <input type="number" id="valorApoio" placeholder="Valor (R$)" min="5" step="5">
+                                    <button id="pagarPix">Pagar com PIX</button>
+                                    <div id="qrCodeContainer" style="margin-top: 15px;"></div>
+                                  </div>
+                                </div>
+                              </div>
+                        </li>
+                    </ul>
+                </section>
+                
+
+                <section class="comment-section">
+                    <h3 class="h3">Deixe um comentário</h3>
+                    <div class="comment-form">
+                      <input type="text" id="userName" placeholder="Seu nome" required>
+                      <textarea id="commentInput" placeholder="Escreva seu comentário..." rows="4" required></textarea>
+                      <button id="enviarComentario">Enviar</button>
+                    </div>
+                    <div id="commentsContainer" class="comments-container"></div>
+                  </section>
+
+    <script src="app.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
