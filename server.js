@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-const comentarioFile = path.join(__dirname, 'backend', 'comentarios.json');
+const comentarioFile = path.join(__dirname, 'comentarios.json'); // Remove "backend/"
 
 
 function lerComentarios() {
