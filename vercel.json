@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "api/*.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/comentarios", "dest": "/api/comentarios.js" },
+      { "src": "/create-pix-payment", "dest": "/api/create-pix-payment.js" },
+      { "src": "/(.*)", "dest": "/public/$1" }
+    ]
+  }
+  
