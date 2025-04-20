@@ -13,7 +13,8 @@ const comentariosRoute = require('./api/comentarios');
 const pagamentoRoute = require('./api/create-pix-payment');
 
 app.use('/api/comentarios', comentariosRoute);
-app.use('/api/pagamento', pagamentoRoute);
+app.use('/create-pix-payment', pagamentoRoute);
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
