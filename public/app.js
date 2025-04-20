@@ -236,7 +236,7 @@ function loadMercadoPagoSDK() {
 // Função para criar pagamento PIX
 async function createPixPayment(amount) {
   try {
-    const response = await fetch('/create-pix-payment', {
+    const response = await fetch('https://neu-folder-1.onrender.com/create-pix-payment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
