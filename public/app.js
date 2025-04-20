@@ -103,7 +103,7 @@ function enablePageNavigation() {
 
 // Sistema de Comentários ATUALIZADO com nome do usuário
 function setupCommentSystem() {
-  const API_URL = 'http://localhost:3000/comentarios';
+  const API_URL = '/comentarios';
   const commentButton = document.getElementById('enviarComentario');
   const commentInput = document.getElementById('commentInput');
   const userNameInput = document.getElementById('userName'); // Novo campo
@@ -235,7 +235,7 @@ function loadMercadoPagoSDK() {
 // Função para criar pagamento PIX
 async function createPixPayment(amount) {
   try {
-    const response = await fetch('http://localhost:3000/create-pix-payment', {
+    const response = await fetch('/create-pix-payment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
