@@ -1,6 +1,8 @@
+const express = require('express');
 const fs = require('fs');
 const path = require('path');
 
+const router = express.Router();
 const comentarioFile = path.join(__dirname, '..', 'comentarios.json');
 
 function lerComentarios() {
@@ -21,33 +23,33 @@ function escreverComentarios(comentarios) {
   }
 }
 
-module.exports = async (req, res) => {
-  if (req.method === 'GET') {
-    const comentarios = lerComentarios();
-    res.status(200).json(comentarios);
-  } else if (req.method === 'POST') {
-    const { autor, texto } = req.body;
+router.get('/', (req, res) => {
+  const comentarios = lerComentarios();
+  res.status(200).json(comentarios);
+});
 
-    if (!autor?.trim() || !texto?.trim()) {
-      return res.status(400).json({ error: 'Nome e comentário são obrigatórios' });
-    }
+router.post('/', (req, res) => {
+  const { autor, texto } = req.body;
 
-    try {
-      const comentarios = lerComentarios();
-      const novoComentario = {
-        autor: autor.trim(),
-        texto: texto.trim(),
-        data: new Date().toISOString()
-      };
-
-      comentarios.push(novoComentario);
-      escreverComentarios(comentarios);
-
-      res.status(201).json(novoComentario);
-    } catch (err) {
-      res.status(500).json({ error: 'Erro ao salvar comentário' });
-    }
-  } else {
-    res.status(405).json({ error: 'Método não permitido' });
+  if (!autor?.trim() || !texto?.trim()) {
+    return res.status(400).json({ error: 'Nome e comentário são obrigatórios' });
   }
-};
+
+  try {
+    const comentarios = lerComentarios();
+    const novoComentario = {
+      autor: autor.trim(),
+      texto: texto.trim(),
+      data: new Date().toISOString()
+    };
+
+    comentarios.push(novoComentario);
+    escreverComentarios(comentarios);
+
+    res.status(201).json(novoComentario);
+  } catch (err) {
+    res.status(500).json({ error: 'Erro ao salvar comentário' });
+  }
+});
+
+module.exports = router;

@@ -1,14 +1,13 @@
+const express = require('express');
 const mercadopago = require('mercadopago');
+
+const router = express.Router();
 
 mercadopago.configure({
   access_token: process.env.MP_ACCESS_TOKEN
 });
 
-module.exports = async (req, res) => {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Método não permitido' });
-  }
-
+router.post('/', async (req, res) => {
   console.log('▶️ MP_ACCESS_TOKEN:', process.env.MP_ACCESS_TOKEN);
   console.log('▶️ Body recebido:', req.body);
 
@@ -43,4 +42,6 @@ module.exports = async (req, res) => {
     console.error('🚨 Erro ao criar pagamento:', error);
     return res.status(500).json({ error: error.message });
   }
-};
+});
+
+module.exports = router;
