@@ -103,7 +103,8 @@ function enablePageNavigation() {
 
 // Sistema de Comentários ATUALIZADO com nome do usuário
 function setupCommentSystem() {
-  const API_URL = 'https://neu-folder.vercel.app/api/comentarios';
+  const API_URL = '/api/comentarios';
+
   const commentButton = document.getElementById('enviarComentario');
   const commentInput = document.getElementById('commentInput');
   const userNameInput = document.getElementById('userName'); // Novo campo
